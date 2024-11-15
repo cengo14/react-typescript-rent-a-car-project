@@ -10,7 +10,7 @@ const Field = ({ img, text }: { img: string; text: string }) => {
       transition={{ duration: 0.5 }}
       className="flex-center flex-col"
     >
-      <img src={img} alt="transmission" width={25} />
+      <img src={img} alt={text} width={25} />
       <p>{text}</p>
     </motion.div>
   );

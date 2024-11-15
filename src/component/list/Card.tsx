@@ -37,7 +37,7 @@ const Card = ({ car }: Props) => {
         <img
           src={generateImage(car)}
           className="w-full h-full object-contain"
-          alt="Arabalar"
+          alt={car.make + " " + car.model}
         />
       </div>
       <div className="w-full ">
@@ -54,6 +54,7 @@ const Card = ({ car }: Props) => {
             designs="w-full py-[25px] text-white"
             title="Daha Fazla"
             icon="right-arrow.svg"
+            ariaLabel="Daha fazla butonu"
           />
         </div>
       </div>

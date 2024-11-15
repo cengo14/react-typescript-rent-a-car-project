@@ -3,8 +3,8 @@ import Button from "../button";
 import { motion } from "framer-motion";
 const Hero = () => {
   const scroll = () => {
-    const scroll = document.querySelector("#araba-katalogu");
-    scroll.scrollIntoView({
+    const scr = document.querySelector("#katalog");
+    scr.scrollIntoView({
       behavior: "smooth",
     });
   };
@@ -24,6 +24,7 @@ const Hero = () => {
           type="button"
           disabled={false}
           handleClick={scroll}
+          ariaLabel="katalog butonu"
         />
       </div>
       <div className="flex justify-center">

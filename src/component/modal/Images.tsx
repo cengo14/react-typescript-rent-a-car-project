@@ -8,7 +8,7 @@ const Images = ({ car }: { car: CarType }) => {
       <div className="w-full h-40 bg-pattern bg-center">
         <img
           src={generateImage(car)}
-          alt="car detail"
+          alt="car detail full picture"
           className="h-full mx-auto object-contain"
         />
       </div>
@@ -16,7 +16,7 @@ const Images = ({ car }: { car: CarType }) => {
         <div className="rounded flex-1 flex relative h-24 bg-primary-blue-100">
           <img
             src={generateImage(car, "29")}
-            alt="car detal picture 1"
+            alt="car detail picture 1"
             className="mx-auto object-contain min-w-[146px]"
           />
         </div>
@@ -30,7 +30,7 @@ const Images = ({ car }: { car: CarType }) => {
         <div className="rounded flex-1 flex relative h-24 bg-primary-blue-100">
           <img
             src={generateImage(car, "13")}
-            alt="car detal picture 2"
+            alt="car detail picture 3"
             className="mx-auto object-contain min-w-[146px]"
           />
         </div>

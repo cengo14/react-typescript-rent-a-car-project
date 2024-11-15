@@ -43,6 +43,7 @@ const List = () => {
             <div className="w-full flex-center py-10">
               {limit < 30 && (
                 <Button
+                  ariaLabel="daha fazla gör"
                   title="Daha Fazla Gör"
                   handleClick={() => setLimit(limit + 5)}
                 />

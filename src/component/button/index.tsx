@@ -7,6 +7,7 @@ interface Props {
   designs?: string;
   icon?: string;
   handleClick?: () => void;
+  ariaLabel: string;
 }
 const Button = ({
   title,
@@ -15,16 +16,18 @@ const Button = ({
   disabled,
   icon,
   handleClick,
+  ariaLabel,
 }: Props) => {
   return (
     <button
+      aria-label={ariaLabel}
       onClick={handleClick}
       disabled={disabled}
       className={`custom-btn bg-primary-blue rounded-full hover:bg-blue-800 transition ${designs}`}
       type={type}
     >
       <span className="flex-1">{title}</span>
-      {icon && <img src={icon} alt="button logo" className="size-6" />}
+      {icon && <img src={icon} alt="sağ yön oku iconu" className="size-6" />}
     </button>
   );
 };

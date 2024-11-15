@@ -31,26 +31,29 @@ const SearchBar = () => {
           placeholder="Marka Seçiniz"
           className="w-full text-black"
         />
-        <button className="ml-3 sm:hidden">
+        <button className="ml-3 sm:hidden" aria-label="model search">
           <img src="/search.svg" className="size-10" alt="marka arama butonu" />
         </button>
       </div>
       <div className="searchbar__item">
-        <img
-          width={25}
-          className="absolute ml-4"
-          src="/model-icon.png"
-          alt="model arama ikonu"
-        />
+        <label htmlFor="model" className="absolute ml-4">
+          <img width={25} src="/model-icon.png" alt="model arama ikonu" />
+        </label>
         <input
+          title="model arama alanı"
+          id="model"
           defaultValue={params.get("model") || ""}
           onChange={(e) => setModel(e!.target.value as string)}
           type="text"
           className="searchbar__input rounded text-black"
           placeholder="Model ismi giriniz.. Örn: Civic"
         />
-        <button className="ml-3">
-          <img src="/search.svg" className="size-10" alt="model arama butonu" />
+        <button className="ml-3" aria-label="search">
+          <img
+            src="/search.svg"
+            className="size-10"
+            alt="büyüteç arama ikonu"
+          />
         </button>
       </div>
     </form>

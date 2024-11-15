@@ -18,6 +18,7 @@ const YearFilter = () => {
         Yıl
       </label>
       <input
+        title="model yılı arama"
         id="year"
         type="number"
         className="w-24 py-[6px] px-2 rounded-[4px] shadow text-black"
@@ -28,7 +29,7 @@ const YearFilter = () => {
         <img
           className="size-9 hover:bg-black"
           src="right-arrow.svg"
-          alt="yıl arama butonu"
+          alt="sağ yön ikonu"
         />
       </button>
     </form>
