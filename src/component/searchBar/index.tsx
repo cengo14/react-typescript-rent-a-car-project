@@ -2,7 +2,7 @@ import React, { FormEvent, useMemo, useState } from "react";
 import ReactSelect from "react-select";
 import { makes } from "../../utils/constant";
 import { useSearchParams } from "react-router-dom";
-import { label } from "framer-motion/client";
+
 const SearchBar = () => {
   const [make, setMake] = useState<string>("");
   const [model, setModel] = useState<string>("");

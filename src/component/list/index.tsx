@@ -22,7 +22,8 @@ const List = () => {
       .then((data) => setCars(data))
       .catch(() => setIsError(true));
   }, [limit, params]);
-  console.log(paramsObject);
+  console.log(cars);
+
   return (
     <div className="padding-x max-width">
       {!cars ? (

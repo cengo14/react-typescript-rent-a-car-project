@@ -1,8 +1,9 @@
 import { CarType } from "./types";
 
 const options = {
+  method: "GET",
   headers: {
-    "x-rapidapi-key": "ea669ca93bmsh43ae66e51841c73p116cedjsn4eea6e398e5a",
+    "x-rapidapi-key": import.meta.env.VITE_API_KEY,
     "x-rapidapi-host": "cars-by-api-ninjas.p.rapidapi.com",
   },
 };
@@ -22,9 +23,10 @@ export const fetchCars = async ({
   fuel_type = "",
   year = "",
 }: Parameters): Promise<CarType[]> => {
+  const url = `https://cars-by-api-ninjas.p.rapidapi.com/v1/cars?model=${model}&make=${make}&year=${year}&fuel_type=${fuel_type}`;
   try {
-    const url = `https://cars-by-api-ninjas.p.rapidapi.com/v1/cars?limit=${limit}&make=${make}&model=${model}&fuel_type=${fuel_type}&year=${year}`;
     const res = await fetch(url, options);
+
     const data = await res.json();
     return data;
   } catch (error) {
